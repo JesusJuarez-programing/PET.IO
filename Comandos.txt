@@ -1,0 +1,9 @@
+php artisan make:migration create_mascotas_table --create=mascotas
+>php artisan make:migration create_dueños_table --create=dueños
+>php artisan make:migration create_operaciones_table --create=operaciones
+>php artisan make:migration create_doctores_table --create=doctores
+php artisan make:migration create_medicamentos_table --create=medicamentos
+php artisan make:migration create_vacunas_table --create=vacunas
+>php artisan make:migration create_citas_table --create=citas
+php artisan make:migration create_preinscripciones_table --create=preinscripciones
+php artisan make:migration create_urgencias_table --create=urgencias
