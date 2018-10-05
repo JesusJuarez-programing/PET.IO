@@ -14,7 +14,12 @@ class CreateDueñosTable extends Migration
     public function up()
     {
         Schema::create('dueños', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('dueño_id');
+            $table->string('nombre');
+            $table->string('apellidos');
+            $table->string('edad');
+            $table->string('direccion');
+            $table->string('telefono')->unique();
             $table->timestamps();
         });
     }

@@ -7,3 +7,15 @@ php artisan make:migration create_vacunas_table --create=vacunas
 >php artisan make:migration create_citas_table --create=citas
 php artisan make:migration create_preinscripciones_table --create=preinscripciones
 php artisan make:migration create_urgencias_table --create=urgencias
+
+php artisan migrate
+
+php artisan make:seeder MascotasTableSeeder
+php artisan make:seeder DueñosTableSeeder
+>php artisan make:seeder OperacionesTableSeeder
+php artisan make:seeder DoctoresTableSeeder
+php artisan make:seeder MedicamentosTableSeeder
+php artisan make:seeder VacunasTableSeeder
+php artisan make:seeder CitasTableSeeder
+php artisan make:seeder PreinscripcionesTableSeeder
+php artisan make:seeder UrgenciasTableSeeder

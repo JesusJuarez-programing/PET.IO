@@ -15,7 +15,11 @@ class CreateOperacionesTable extends Migration
     {
         Schema::create('operaciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->integer('mascota_id');
+            $table->integer('doctor_id');
+            $table->string('tipo');
+            $table->string('sala');
+            $table->dateTimeTz('fecha_hora');
         });
     }
 

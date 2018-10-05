@@ -14,7 +14,9 @@ class CreateUrgenciasTable extends Migration
     public function up()
     {
         Schema::create('urgencias', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('urgencia_id');
+            $table->integer('mascota_id');
+            $table->integer('doctor_id');
             $table->timestamps();
         });
     }
