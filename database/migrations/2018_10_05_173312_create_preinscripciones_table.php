@@ -14,7 +14,7 @@ class CreatePreinscripcionesTable extends Migration
     public function up()
     {
         Schema::create('preinscripciones', function (Blueprint $table) {
-            $table->increments('preinscripciones_id');
+            $table->increments('id');
             $table->integer('mascota_id');
             $table->integer('medicamento_id');
             $table->timestamps();

@@ -39,3 +39,26 @@ php artisan make:model Vacunas
 php artisan make:model Citas
 php artisan make:model Preinscripciones
 php artisan make:model Urgencias
+
+php artisan migrate
+php artisan db:seed
+
+php artisan make:controller MascotasControler --resource
+php artisan make:controller DueñosControler --resource
+php artisan make:controller OperacionesControler --resource
+php artisan make:controller DoctoresControler --resource
+php artisan make:controller MedicamentosControler --resource
+php artisan make:controller VacunasControler --resource
+php artisan make:controller CitasControler --resource
+php artisan make:controller PreinscripcionesControler --resource
+php artisan make:controller UrgenciasControler --resource
+
+php artisan make:resource Mascotas
+php artisan make:resource Dueños
+php artisan make:resource Operaciones
+php artisan make:resource Doctores
+php artisan make:resource Medicamentos
+php artisan make:resource Vacunas
+php artisan make:resource Citas
+php artisan make:resource Preinscripciones
+php artisan make:resource Urgencias
