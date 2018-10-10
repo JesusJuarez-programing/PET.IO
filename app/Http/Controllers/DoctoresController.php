@@ -111,17 +111,13 @@ class DoctoresController extends Controller
         else
         {
             $doctorActualizar = Doctores::findOrFail($id);
-            if ($doctorActualizar != null){
-                $doctorActualizar->nombre = $request->input('nombre');
-                $doctorActualizar->apellidos = $request->input('apellidos');
-                $doctorActualizar->edad = $request->input('edad');
-                $doctorActualizar->direccion = $request->input('direccion');
-                $doctorActualizar->telefono = $request->input('telefono');
-                $doctorActualizar->save();
-                return response()->json($doctorActualizar)->setStatusCode(201);
-            }
-            $message = array("message" => "No se encontraro el elemento.");
-            return response()->json($message)->setStatusCode(404);
+            $doctorActualizar->nombre = $request->input('nombre');
+            $doctorActualizar->apellidos = $request->input('apellidos');
+            $doctorActualizar->edad = $request->input('edad');
+            $doctorActualizar->direccion = $request->input('direccion');
+            $doctorActualizar->telefono = $request->input('telefono');
+            $doctorActualizar->save();
+            return response()->json($doctorActualizar)->setStatusCode(201);
         }
     }
 

@@ -113,16 +113,12 @@ class CitasController extends Controller
         else
         {
             $citaActualizar =Citas::findOrFail($id);
-            if ($citaActualizar != null){
-                $citaActualizar->mascota_id = $request->input('mascota_id');
-                $citaActualizar->doctor_id = $request->input('doctor_id');
-                $citaActualizar->fecha_hora = $request->input('fecha_hora');
-                $citaActualizar->tipo = $request->input('tipo');
-                $citaActualizar->save();
-                return response()->json($citaActualizar)->setStatusCode(201);
-            }
-            $message = array("message" => "No se encontraro el elemento.");
-            return response()->json($message)->setStatusCode(404);
+            $citaActualizar->mascota_id = $request->input('mascota_id');
+            $citaActualizar->doctor_id = $request->input('doctor_id');
+            $citaActualizar->fecha_hora = $request->input('fecha_hora');
+            $citaActualizar->tipo = $request->input('tipo');
+            $citaActualizar->save();
+            return response()->json($citaActualizar)->setStatusCode(201);
         }
     }
 
