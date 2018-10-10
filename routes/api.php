@@ -25,4 +25,4 @@ Route::resource('medicamentos', 'MedicamentosController');
 Route::resource('operaciones', 'OperacionesController');
 Route::resource('preinscripciones', 'PreinscripcionesController');
 Route::resource('urgencias', 'UrgenciasController');
-Route::resource('Vacunas', 'VacunasController');
+Route::resource('vacunas', 'VacunasController');
