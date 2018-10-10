@@ -18,8 +18,12 @@ class CitasController extends Controller
     public function index()
     {
         $citas = Citas::all();
-        $conversion = CitasResource::collection($citas);
-        return response()->json($conversion)->setStatusCode(200);
+        if ($citas != null){
+            $conversion = CitasResource::collection($citas);
+            return response()->json($conversion)->setStatusCode(200);
+        }
+        $message = array("message" => "No se encontraron elementos.");
+        return response()->json($message)->setStatusCode(404);
     }
 
     /**
@@ -70,8 +74,12 @@ class CitasController extends Controller
     public function show($id)
     {
         $citaMostrar = Citas::findOrFail($id);
-        $conversion = new CitasResource($citaMostrar);
-        return response()->json($conversion)->setStatusCode(200);
+        if ($citaMostrar != null){
+            $conversion = new CitasResource($citaMostrar);
+            return response()->json($conversion)->setStatusCode(200);
+        }
+        $message = array("message" => "No se encontraro el elemento.");
+        return response()->json($message)->setStatusCode(404);
     }
 
     /**
@@ -105,12 +113,16 @@ class CitasController extends Controller
         else
         {
             $citaActualizar =Citas::findOrFail($id);
-            $citaActualizar->mascota_id = $request->input('mascota_id');
-            $citaActualizar->doctor_id = $request->input('doctor_id');
-            $citaActualizar->fecha_hora = $request->input('fecha_hora');
-            $citaActualizar->tipo = $request->input('tipo');
-            $citaActualizar->save();
-            return response()->json($citaActualizar)->setStatusCode(201);
+            if ($citaActualizar != null){
+                $citaActualizar->mascota_id = $request->input('mascota_id');
+                $citaActualizar->doctor_id = $request->input('doctor_id');
+                $citaActualizar->fecha_hora = $request->input('fecha_hora');
+                $citaActualizar->tipo = $request->input('tipo');
+                $citaActualizar->save();
+                return response()->json($citaActualizar)->setStatusCode(201);
+            }
+            $message = array("message" => "No se encontraro el elemento.");
+            return response()->json($message)->setStatusCode(404);
         }
     }
 
