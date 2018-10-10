@@ -11,6 +11,6 @@ class MedicamentosTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Medicamento::class, 100)->create();
+        factory(App\Medicamentos::class, 100)->create();
     }
 }

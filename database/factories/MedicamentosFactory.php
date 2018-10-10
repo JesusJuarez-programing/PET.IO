@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(App\Medicamentos::class, function (Faker $faker) {
     return [
         'nombre' => $faker->name,
         'cantidad' => $faker->numberBetween($min = 1, $max = 100),

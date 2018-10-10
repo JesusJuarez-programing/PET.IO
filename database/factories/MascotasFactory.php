@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(App\Mascotas::class, function (Faker $faker) {
     return [
         'nombre' => $faker->name,
         'edad' => $faker->numberBetween($min = 1, $max = 100),

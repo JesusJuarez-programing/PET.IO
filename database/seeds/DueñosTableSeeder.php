@@ -11,6 +11,6 @@ class DueñosTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Dueño::class, 100)->create();
+        factory(App\Dueños::class, 100)->create();
     }
 }

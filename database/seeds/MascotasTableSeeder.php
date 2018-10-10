@@ -11,6 +11,6 @@ class MascotasTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Mascota::class, 100)->create();
+        factory(App\Mascotas::class, 100)->create();
     }
 }

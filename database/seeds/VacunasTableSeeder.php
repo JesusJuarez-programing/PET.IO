@@ -11,6 +11,6 @@ class VacunasTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Vacuna::class, 100)->create();
+        factory(App\Vacunas::class, 100)->create();
     }
 }

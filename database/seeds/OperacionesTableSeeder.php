@@ -11,6 +11,6 @@ class OperacionesTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Operacion::class, 100)->create();
+        factory(App\Operaciones::class, 100)->create();
     }
 }
