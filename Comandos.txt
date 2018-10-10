@@ -19,3 +19,23 @@ php artisan make:seeder VacunasTableSeeder
 php artisan make:seeder CitasTableSeeder
 php artisan make:seeder PreinscripcionesTableSeeder
 php artisan make:seeder UrgenciasTableSeeder
+
+>php artisan make:factory MascotasFactory
+php artisan make:factory DueñosFactory
+php artisan make:factory OperacionesFactory
+>php artisan make:factory DoctoresFactory
+php artisan make:factory MedicamentosFactory
+>php artisan make:factory VacunasFactory
+php artisan make:factory CitasFactory
+php artisan make:factory PreinscripcionesFactory
+php artisan make:factory UrgenciasFactory
+
+php artisan make:model Mascotas
+php artisan make:model Dueños
+php artisan make:model Operaciones
+php artisan make:model Doctores
+php artisan make:model Medicamentos
+php artisan make:model Vacunas
+php artisan make:model Citas
+php artisan make:model Preinscripciones
+php artisan make:model Urgencias

@@ -19,7 +19,7 @@ class CreateMedicamentosTable extends Migration
             $table->double('cantidad');
             $table->string('aplicacion');
             $table->string('fabricante');
-            $table->inteher('existencia');
+            $table->integer('existencia');
             $table->timestamps();
         });
     }

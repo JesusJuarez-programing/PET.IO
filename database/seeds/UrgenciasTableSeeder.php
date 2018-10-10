@@ -11,6 +11,6 @@ class UrgenciasTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Urgencia::class, 100)->create();
     }
 }

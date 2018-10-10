@@ -11,6 +11,6 @@ class PreinscripcionesTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Preinscripcion::class, 100)->create();
     }
 }
