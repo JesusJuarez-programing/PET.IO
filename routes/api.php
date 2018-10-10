@@ -18,3 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::resource('citas', 'CitasController');
+Route::resource('doctores', 'DoctoresController');
+Route::resource('dueños', 'DueñosController');
+Route::resource('mascotas', 'MascotasController');
+Route::resource('medicamentos', 'MedicamentosController');
+Route::resource('operaciones', 'OperacionesController');
+Route::resource('preinscripciones', 'PreinscripcionesController');
+Route::resource('urgencias', 'UrgenciasController');
+Route::resource('Vacunas', 'VacunasController');
