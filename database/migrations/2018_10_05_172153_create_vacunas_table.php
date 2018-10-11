@@ -17,6 +17,8 @@ class CreateVacunasTable extends Migration
             $table->increments('id');
             $table->integer('mascota_id');
             $table->integer('medicamento_id');
+            $table->foreign('id')->references('mascota_id')->on('mascotas')->onDelete('cascade');
+            $table->foreign('id')->references('medicamento_id')->on('medicamentos')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,5 +31,6 @@ class CreateVacunasTable extends Migration
     public function down()
     {
         Schema::dropIfExists('vacunas');
+        $table->dropForeign(['mascota_id', 'medicamento_id']);
     }
 }

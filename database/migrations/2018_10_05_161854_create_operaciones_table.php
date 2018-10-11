@@ -15,11 +15,13 @@ class CreateOperacionesTable extends Migration
     {
         Schema::create('operaciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('mascota_id');
-            $table->integer('doctor_id');
             $table->string('tipo');
             $table->string('sala');
             $table->dateTimeTz('fecha_hora');
+            $table->integer('mascota_id');
+            $table->integer('doctor_id');
+            $table->foreign('id')->references('mascota_id')->on('mascotas')->onDelete('cascade');
+            $table->foreign('id')->references('doctor_id')->on('doctores')->onDelete('cascade');
         });
     }
 
@@ -31,5 +33,6 @@ class CreateOperacionesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('operaciones');
+        $table->dropForeign(['mascota_id', 'doctor_id']);
     }
 }

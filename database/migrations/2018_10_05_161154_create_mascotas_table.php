@@ -16,9 +16,10 @@ class CreateMascotasTable extends Migration
         Schema::create('mascotas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->integer('edad');
-            $table->integer('dueño_id');
+            $table->integer('edad');;
             $table->string('raza');
+            $table->integer('dueño_id');
+            $table->foreign('id')->references('dueño_id')->on('dueños')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -31,5 +32,6 @@ class CreateMascotasTable extends Migration
     public function down()
     {
         Schema::dropIfExists('mascotas');
+        $table->dropForeign(['dueño_id']);
     }
 }

@@ -106,7 +106,7 @@ class MascotasController extends Controller
         if ($validator->fails())
         {
             $response = array('response' => $validator->messages(), 'success' => false);
-            return $response;
+            return $response->json(,412);
         }
         else
         {

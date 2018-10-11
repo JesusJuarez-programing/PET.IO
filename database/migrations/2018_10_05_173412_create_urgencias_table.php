@@ -17,6 +17,8 @@ class CreateUrgenciasTable extends Migration
             $table->increments('id');
             $table->integer('mascota_id');
             $table->integer('doctor_id');
+            $table->foreign('mascota_id')->references('id')->on('mascotas')->onDelete('cascade');
+            $table->foreign('doctor_id')->references('id')->on('doctores')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,5 +31,6 @@ class CreateUrgenciasTable extends Migration
     public function down()
     {
         Schema::dropIfExists('urgencias');
+        $table->dropForeign(['mascota_id', 'doctor_id']);
     }
 }
